@@ -5,7 +5,7 @@
 
   collections:
     - paloaltonetworks.panos
-    - nembery.skillet
+    - pan_community.skillet
 
   tasks:
     # currently using clear text vars for testing
