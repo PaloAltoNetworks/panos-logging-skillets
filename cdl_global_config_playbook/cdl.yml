@@ -5,7 +5,7 @@
 
   collections:
     - paloaltonetworks.panos
-    - nembery.skillet
+    - pan_community.skillet
 
   tasks:
     # currently using clear text vars for testing
@@ -18,7 +18,7 @@
       pip:
         name:
           - pan-python
-          - pandevice
+          - pan-os-python
           - xmltodict
           - requests
           - requests_toolbelt
@@ -277,7 +277,7 @@
         state: absent
 
     - name: commit config
-      panos_commit:
+      panos_commit_firewall:
         provider: '{{ provider }}'
 
     # logging status show if firewall active and connected to CDL

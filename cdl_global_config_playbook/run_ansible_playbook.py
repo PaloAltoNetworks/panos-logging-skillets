@@ -56,8 +56,8 @@ def cli(cdl_preshared_key, target_ip, target_username, target_password):
 
     # install ansible skillet player collection
     try:
-        print('install nembery.skillets collection as skillet player')
-        install_panos = Popen('ansible-galaxy collection install -c -f nembery.skillet', shell=True, stdout=PIPE,
+        print('install pan_community.skillet collection as skillet player')
+        install_panos = Popen('ansible-galaxy collection install -c -f pan_community.skillet', shell=True, stdout=PIPE,
                               stderr=PIPE)
         stdout, stderr = install_panos.communicate()
         # if ERROR in output message then raise to force except
